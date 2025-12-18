@@ -1,24 +1,25 @@
 type Props = {
-  company: string;
-  role: string;
-  date: string;
-  bullets: string[];
+    company: string;
+    role: string;
+    date: string;
+    bullets: string[];
 };
 
-export default function ExperienceCard({company, role, date, bullets}: Props){
+export default function ExperienceCard({ company, role, date, bullets }: Props) {
     return (
-        <div className="border rounded-xl p-6 shadow-sm">
-            <div className="flex justify-between flex-wrap">
-                <h3 className="font-semibold">{role}</h3>
-                <span className="text-sm text-gray-500">{date}</span>
+        <div className="card shadow-sm border-light rounded-3 p-4">
+            <div className="d-flex justify-content-between flex-wrap align-items-center mb-2">
+                <h5 className="card-title mb-0">{role}</h5>
+                <small className="text-muted">{date}</small>
             </div>
-            <p className="text-gray-600">{company}</p>
-            <ul className="list-disc ml-5 mt-4 space-y-2">
+            <h6 className="text-secondary">{company}</h6>
+            <ul className="mt-3 list-group list-group-flush">
                 {bullets.map((b, i) => (
-                    <li key={i}>{b}</li>
+                    <li key={i} className="list-group-item px-0 border-0 ps-3">
+                        {b}
+                    </li>
                 ))}
             </ul>
         </div>
-
     );
 }

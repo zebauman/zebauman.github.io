@@ -1,16 +1,31 @@
-export default function Hero(){
+export default function Hero() {
     return (
-        <section id="hero" className="py-24">
-            <h1 className="text-4xl font-bold">
-                Zachary Bauasman
-            </h1>
-            <p className="mt-4 text-lg text-gray-600">
-                Computer Engineering · Embedded Systems · Firmware
-            </p>
-            <p className="mt-6 max-w-xl">
-                Graduating May 2026. Specialized in real-time embedded systems,
-                firmware development, and hardware-software integration.
-            </p>
+        <section id="hero" className="py-5 bg-light min-vh-5 d-flex align-items-center">
+            <div className="container text-center">
+                <h1 className="display-4 fw-bold mb-3">Zachary Bauman</h1>
+                <p className="lead text-secondary mb-4">
+                    Computer Engineering · Embedded Systems · Firmware
+                </p>
+                <p className="mb-4">
+                    Graduating May 2026. Focused on real-time embedded systems, firmware
+                    development in C/C++, and hardware–software integration across
+                    microcontroller platforms.
+                </p>
+                <div className="d-flex justify-content-center gap-3">
+                    <a
+                        href="#projects"
+                        className="btn btn-dark btn-lg"
+                    >
+                        View Projects
+                    </a>
+                    <a
+                        href="/resume.pdf"
+                        className="btn btn-outline-secondary btn-lg"
+                    >
+                        Resume
+                    </a>
+                </div>
+            </div>
         </section>
     );
 }
